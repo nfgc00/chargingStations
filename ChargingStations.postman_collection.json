@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "fb7ddbb4-f7e3-4764-8a36-b6d43c5a65ee",
+		"name": "ChargingStations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1009\",\n\t\"latitude\": \"56.516382\",\n\t\"longitude\": \"17.378306\",\n\t\"postalCode\": \"10119\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/station",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"1009\",\n\t\"latitude\": \"56.516382\",\n\t\"longitude\": \"17.378306\",\n\t\"postalCode\": \"10121\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/station",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"station"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAll",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/stations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"stations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get/{id}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/station/1009",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"station",
+						"1009"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list/{postalCode}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/stations/10118",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"stations",
+						"10118"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchByRadius",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/chargingStation/search?latitude=54.516382&longitude=15.378306&radius=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"chargingStation",
+						"search"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "54.516382"
+						},
+						{
+							"key": "longitude",
+							"value": "15.378306"
+						},
+						{
+							"key": "radius",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
