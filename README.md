@@ -15,5 +15,4 @@ Charging Station operations available:
 
 Postman Collection to test the REST Interface:
 
-[Postman]: ChargingStations.postman_collection.json	"Postman Collection"
-
+[Postman Collection](ChargingStations.postman_collection.json) 
